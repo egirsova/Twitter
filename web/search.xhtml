@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!--
+To change this license header, choose License Headers in Project Properties.
+To change this template file, choose Tools | Templates
+and open the template in the editor.
+-->
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml"
+      xmlns:h="http://java.sun.com/jsf/html"
+      xmlns:f="http://java.sun.com/jsf/core">
+    <h:head>
+        <title>Search</title>
+        <meta name="viewport" content="width=device-width"/>
+    </h:head>
+    <h:body>
+        <h:form>
+            <h:inputText id="search" value="#{search.search}"></h:inputText>
+            <h:commandButton value="Search" action="#{search.searchButton()}"></h:commandButton>
+            <h:panelGrid columns="3">
+                <h:inputTextarea id="textArea" rows="20" cols="100" readonly="true" value="#{search.outputSearchResults()}">
+                </h:inputTextarea>
+            </h:panelGrid>
+        </h:form>
+    </h:body>
+</html>

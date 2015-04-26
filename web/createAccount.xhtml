@@ -1,0 +1,46 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!--
+To change this license header, choose License Headers in Project Properties.
+To change this template file, choose Tools | Templates
+and open the template in the editor.
+-->
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml"
+      xmlns:h="http://java.sun.com/jsf/html"
+      xmlns:f="http://java.sun.com/jsf/core">
+    <h:head>
+        <title>Create Twitter Account</title>
+        <meta name="viewport" content="width=device-width"/>
+    </h:head>
+    <h:body>
+        <h:form id="form">
+      <h:panelGrid columns="3">
+         Enter Full Name:
+         <h:inputText id="name" value="#{createAccount.name}">
+              <f:validateRequired for="name"/>
+        </h:inputText>
+        <h:message for="name" style="color:red"/>
+          
+         Enter Username:
+        <h:inputText id="userName" value="#{createAccount.userName}">
+          <f:validateRequired for="userName"/>
+        </h:inputText>
+        <h:message for="userName" style="color:red"/>
+
+        Enter Password:
+        <h:inputSecret id="password" value="#{createAccount.password}">
+          <f:validateRequired for="password"/>
+        </h:inputSecret>
+        <h:message for="password" style="color:red"/>
+        
+        Enter Handle:
+        <h:inputText id="handle" value="#{createAccount.handle}">
+            <f:validateRequired for="handle"/>
+        </h:inputText>
+        <h:message for="handle" style="color:red"/>
+
+        <h:commandButton value="Create Account" action="#{createAccount.newAccount}"/>
+      </h:panelGrid>
+    </h:form>
+    </h:body>
+</html>

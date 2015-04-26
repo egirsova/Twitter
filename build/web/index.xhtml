@@ -1,0 +1,30 @@
+<?xml version='1.0' encoding='UTF-8' ?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml"
+      xmlns:h="http://java.sun.com/jsf/html"
+      xmlns:f="http://java.sun.com/jsf/core">
+    <h:head>
+        <title>Twitter: Log In</title>
+    </h:head>
+    <h:body>
+        <h:form id="form">
+      <h:panelGrid columns="3">
+        Enter user name:
+        <h:inputText id="name" value="#{login.name}">
+          <f:validateRequired for="name"/>
+        </h:inputText>
+        <h:message for="name" style="color:red"/>
+
+        Enter password:
+        <h:inputSecret id="password" value="#{login.password}">
+          <f:validateRequired for="password"/>
+        </h:inputSecret>
+        <h:message for="password" style="color:red"/>
+
+        <h:commandButton value="Log In" action="#{login.doLogin}"/>
+        <h:commandButton value="New Account" action="createAccount"/>
+      </h:panelGrid>
+    </h:form>
+    </h:body>
+</html>
+
